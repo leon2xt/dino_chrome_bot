@@ -13,20 +13,20 @@ from PIL import ImageGrab
 import pyautogui
 
 
-# Region of detections
-# Coordenates for resolution 1600x900
+# Região de coordenadas
+# Coordenadas para a resolução 1600x900
 X = 655.0  # X2 = X + 15
 Y1 = 215
 Y2 = 250
 
 
-# Take screenshot using PIL lib
+# Tira um printscreen da tela usando o  PIL lib
 def capture_screen():
     screen = ImageGrab.grab()
     return screen
 
 
-# Detects enemy by diff in pixel color in region of detections
+# Detecta o inimigo por diferença na cor do pixel na região de detecções
 def detect_enemy(screen):
     aux_color = screen.getpixel((int(X), Y1))
     for x in range(int(X), int(X+15)):
@@ -38,7 +38,7 @@ def detect_enemy(screen):
                 aux_color = color
 
 
-# Dino Jumps
+# Dino Pulo
 def jump():
     global X
     pyautogui.press("up")
@@ -48,7 +48,7 @@ def jump():
 print("Start in 3 seconds...")
 time.sleep(3)
 
-# Infinite Loop of bot
+# Loop infinito do bot
 while True:
     screen = capture_screen()
     if detect_enemy(screen):
