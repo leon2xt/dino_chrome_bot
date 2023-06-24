@@ -2,8 +2,9 @@
 A bot to win Dino Chrome Game (chrome://dino)
 
 # TODO
-- Optimize values for win the game
-- Detect player resolution
+- Otimize os valores para vencer o game
+- Detecte a resolução do dino bot
 
+Créditos:
 Guilherme Junqueira - Solyd
 https://solyd.com.br/treinamentos
